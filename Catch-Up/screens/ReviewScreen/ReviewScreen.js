@@ -13,10 +13,9 @@ const ReviewScreen = (props) => {
     const { userName, location, reviewText} = review;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
       <View style={styles.container}>
-        
-
+        <View style={styles.card}>
         <View style={styles.logoContainer}>
         <Image style={styles.logo} source={{ uri: 'https://picsum.photos/10' }} />
         <Text>
@@ -39,7 +38,8 @@ const ReviewScreen = (props) => {
 
 
         {/* <Image style={styles.image} source={{ uri: 'https://i.ibb.co/Jdz0XJB/review1.png' }} /> */}
-      </View>
+        </View>
+        </View>
     </SafeAreaView>
   );
 };
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#ecf0f1',
+    backgroundColor: '#fff',
   },
   image: {
     width: "100%",
@@ -69,8 +69,15 @@ const styles = StyleSheet.create({
     height: 50
   },
   card: {
-    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-    transition: "0.3s",
-    borderRadius: "5px"
+    borderRadius: 6,
+    elevation: 3,
+    backgroundColor: '#fff',
+    shadowOffset: { width:1, height: 1 },
+    shadowColor: '#333',
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    marginHorizontal: 4,
+    marginVertical: 6,
+    padding: 20
   }
 });
