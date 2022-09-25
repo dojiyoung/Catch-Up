@@ -1,9 +1,17 @@
 import React from 'react';
 import { SafeAreaView, Text, View, StyleSheet, Image } from 'react-native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import { Card } from 'react-native-paper';
+const Tab = createMaterialTopTabNavigator();
 
-
+function MyTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="All" component={ReviewAllScreen} />
+      <Tab.Screen name="Following" component={ReviewFollowingScreen} />
+    </Tab.Navigator>
+  );
+}
 
 const ReviewScreen = (props) => {
     
@@ -15,9 +23,10 @@ const ReviewScreen = (props) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
+        <View>
         <View style={styles.card}>
         <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={{ uri: 'https://picsum.photos/10' }} />
+        <Image style={styles.logo} source={{ uri: 'https://i.ibb.co/jy2c4LB/308604883-1830000070678993-878138337519142282-n.jpg' }} />
         <Text>
             { userName }
             {"\n"}
@@ -38,6 +47,7 @@ const ReviewScreen = (props) => {
 
 
         {/* <Image style={styles.image} source={{ uri: 'https://i.ibb.co/Jdz0XJB/review1.png' }} /> */}
+        </View>
         </View>
         </View>
     </SafeAreaView>
@@ -62,7 +72,8 @@ const styles = StyleSheet.create({
     height: 200
   },
   logoContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+  
   },
   logo: {
     width: 50,

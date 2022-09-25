@@ -5,14 +5,8 @@ import ReviewScreen from './screens/ReviewScreen/ReviewScreen';
 export default function App() {
   const review = {
     userName: "Jiyoung Do",
-    location: "@ Sunny side Coffee - dongdaemungu ",
-    reviewText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Phasellus eget purus sit amet sem convallis aliquet congue ac purus.
-     Maecenas non odio arcu. Vivamus feugiat at nisl sed rutrum. 
-     Maecenas quis facilisis mauris. Vivamus in turpis nisl. 
-     Fusce nec justo velit. 
-     Maecenas in arcu finibus, 
-     feugiat augue at, vestibulum sapien.`
+    location: "@ Coffee Lab - Glenfield ",
+    reviewText: `We go to Coffee Lab at least five times a week. The coffee is always very good and easily the best on the North Shore.The cheese scones are delicious. The staff are very friendly and helpful. A great place to go.`
 }
 
   return (
